@@ -16,7 +16,7 @@ import com.srija.syllabusproject.service.SyllabusService;
 public class SyllabusController {
 
     private final SyllabusService syllabusService;
-    private final SyllabusSectionRepository syllabusSectionRepository; // FIX: Correct repo
+    private final SyllabusSectionRepository syllabusSectionRepository; 
 
     public SyllabusController(SyllabusService syllabusService, SyllabusSectionRepository syllabusSectionRepository) {
         this.syllabusService = syllabusService;
@@ -35,7 +35,7 @@ public class SyllabusController {
         syllabus.setDescription(description);
         syllabus.setPhoto(file.getBytes()); // store image bytes
 
-        return ResponseEntity.ok(syllabusSectionRepository.save(syllabus)); // FIX: save with correct repo
+        return ResponseEntity.ok(syllabusSectionRepository.save(syllabus)); 
     }
 
     @GetMapping
