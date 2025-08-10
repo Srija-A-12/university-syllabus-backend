@@ -25,8 +25,8 @@ public class Semester {
 
     private int number;
 
-    private String name; // ✅ Added field for name
-    private LocalDate startDate; // ✅ Added field for start date
+    private String name; 
+    private LocalDate startDate;
 
     @ManyToOne
     @JoinColumn(name = "department_id")
